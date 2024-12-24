@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>537</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cost estimation for building construction </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*  ---------------------------- ALL OTHERS WIDGETS ---------------------------- */
+*{
+
+selection-background-color: rgb(67, 128, 179);
+selection-color: rgb(255, 255, 255);
+}
+
+/*  ---------------------------- MAIN WINDOW, WIDGET ---------------------------- */
+QMainWindow,QWidget
+{
+background-color: rgb(255, 255, 255);
+color:rgb(0,0,0);
+
+}
+QMainWindow{
+background-image: url(:/dark_blue/img/building.png);
+
+}
+/*  ---------------------------- MENU BAR ---------------------------- */
+QMenuBar
+{
+color:rgb(120,120,120);
+background:rgb(230,230,230);
+}
+QMenuBar::item:selected
+{
+color:rgb(100,100,100);
+background:rgb(200,200,200);
+}
+/*...lable...*/
+QLabel{
+background-color: rgb(255, 255, 255);
+}
+/*  ---------------------------- CONTEXT MENU ---------------------------- */
+QMenu
+{
+color:rgb(90,90,90);
+background:rgb(230,230,230);
+padding: 3;
+}
+QMenu::item:selected
+{
+color:rgb(90,90,90);
+background:rgb(200,200,200);
+}
+QMenu::separator {
+background:rgb(200,200,200);
+height:1px;
+}
+
+
+/*  ---------------------------- Q TAB BAR ---------------------------- */
+QTabBar::tab {
+color:rgb(150,150,150);
+background:rgb(240,240,240);
+height:30;
+width:80;
+border: rgb(240,240,240);
+border-width: 0 0 2px 0;
+padding-left:10;
+}
+
+QTabBar::tab:selected {
+background:white;
+color:rgb(100,100,100);
+border: solid rgb(0,150,255);
+border-width: 0 0 5px 0;
+}
+QTableWidget QTableCornerButton::section {
+background-color: rgb(255, 255, 255);
+}
+/*-----------------------------------------------------------------
+------------------------------ LINE_EDIT --------------------------
+------------------------------ TEXT BROWSER -----------------------
+------------------------------ TEXT_EDIT---------------------------
+------------------------------ PLAIN_TEXT -------------------------
+------------------------------------------------------------------- */
+QLineEdit,QTextBrowser,QTextEdit,QPlainTextEdit
+{
+color:rgb(20,20,20);
+background-color:white;
+border: solid lightgrey;
+border-width: 0 0 2px 0;
+border-bottom-left-radius: 5;
+border-bottom-right-radius: 5;
+}
+
+QLineEdit:disabled
+{
+color:rgb(160, 150, 150);
+background-color:rgb(255, 240, 240);
+border: solid rgb(253, 14, 14);
+border-width: 0 0 2px 0;
+border-bottom-left-radius: 5;
+border-bottom-right-radius: 5;
+}
+
+/*  ---------------------------- COMBO BOX ----------------------------*/
+QComboBox
+{
+font: 75 italic 10pt &quot;Arial&quot;;
+color:#002f6c;
+background-color:4f83cc;
+min-width: 9px;
+padding: 1px 0px 1px 3px;
+border: 2px solid rgb(0,115,170);
+
+}
+
+QComboBox:hover
+{
+color:#002f6c;
+background-color: white;
+}
+
+QComboBox:selected
+{
+color:rgb(0,115,170);
+selection-background-color: rgb(255, 255, 255);
+}
+
+QComboBox::drop-down
+{
+width: 30px;
+	color: rgb(0, 0, 0);
+background-color:rgb(0,115,170);
+}
+
+QComboBox::down-arrow
+{
+color: rgb(0, 0, 0);
+image: url(:/dark_blue/img/branch_open.png);
+width: 14px;
+height: 14px;
+}
+
+
+/* -------------------------------- CHECK BOX ----------------------------------------- */
+QCheckBox
+{
+background: rgb(255, 255, 255);
+color:rgb(25, 29, 32);
+padding: 6;
+}
+/* ----------------------------  TOOL BOX  ----------------------------  */
+QToolBox::tab
+{
+color:darkgrey;
+background:lightgrey;
+}
+QToolBox::tab::selected
+{
+color:grey;
+background:rgb(250, 250,250);
+}
+QToolBox::tab::hover
+{
+color:white;
+background:rgb(0,115,170);
+}
+/*  ---------------------------- PROGRESS BAR ---------------------------- */
+QProgressBar {
+color:grey;
+text-align: center;
+font-size:13px;
+}
+QProgressBar::chunk {
+background:rgb(0, 193, 50);
+}
+/*  ---------------------------- PUSHBUTTON ---------------------------- */
+QPushButton
+{
+border: 1px solid lightgrey;
+color:white;
+background:rgb(0,115,170);
+min-height:30;
+min-width: 50;
+}
+QPushButton:hover
+{
+border: 1px solid lightgrey;
+color:white;
+background:rgb(0, 120, 210);
+}
+
+QPushButton:pressed
+{
+border: 1px solid lightgrey;
+color:white;
+background:rgb(0, 53, 100);
+}
+/*  ----------------------------  LCD NUMBER ---------------------------- */
+QLCDNumber
+{
+color:rgb(0,115,170);
+border:2 solid rgb(100,100,100);
+}
+/*  ---------------------------- TABLE_LIST_TABLE ---------------------------- */
+QTableView,
+QTableWidget
+{
+alternate-background-color: rgb(240, 250, 255);
+}
+QTreeView
+{
+background: rgb(250,250,250);
+color: rgb(180,180,180);
+}
+QTableView::item:selected, 
+QListView::item:selected,
+QTableView::item:hover, 
+QListView::item:hover, 
+QTreeView::item:hover
+{
+background:rgb(0,115,170);
+color:rgb(250,250,250);
+}
+QTableView::item, 
+QListView::item, 
+QTreeView::item
+{
+color:rgb(100,100,100);
+}
+QTreeView::item:selected,QListView::item:selected,QTableView::item:selected
+{
+color:rgb(37, 62, 71);
+background:rgb(209, 241, 252);
+}
+/* QTreeView::item:has-children
+{
+background-color: rgb(0, 78, 134);
+color: white;
+border-bottom: 2px solid qlineargradient(spread:pad, x1:1, y1:0.5, x2:0, y2:0.5, stop:0 rgba(255, 255, 255, 0), stop:0.5 rgba(0, 150, 255, 255), stop:1 rgba(255, 255, 255, 0));
+}
+*/
+/*  ---------------------------- HEADER VIEW ---------------------------- */
+QHeaderView::section
+{
+color:rgb(133, 133, 133);
+background:white;
+border:transparent;
+text-align:center;
+padding:1;
+}
+/* ------------------------------- CALENDAR -------------------------------------------------- */
+QCalendarView
+{
+color: rgb(20,20,20);
+background-color: rgb(240,240,240);
+alternate-background-color: rgb(0,115,170);
+selection-background-color: white;
+selection-color: black;
+}
+QAbstractItemView
+{
+color:rgb(200,200,200);
+}
+
+
+/* ---------------------------------------- SLIDER HORIZONTAL ----------------------------------------------- */
+
+
+QSlider::groove:horizontal,QSlider::add-page:horizontal
+{
+background: rgb(255, 255, 255);
+height: 27px;
+}
+QSlider::sub-page:horizontal {
+height: 10px;
+background: rgb(0,115,170);
+}
+QSlider::handle:horizontal {
+margin-right: -10px;
+margin-left: -10px;
+background: rgb(0,115,170);
+}
+QSlider::handle:horizontal:hover {
+background:rgb(0,115,170);
+}
+
+/* --------------------------------  VERTICAL SLIDER --------------------------------------------------------------  */
+
+QSlider::handle
+{
+border-radius: 3px;
+}
+
+QSlider::groove:vertical,QSlider::add-page:vertical,QSlider::sub-page:vertical
+{
+width: 20px;
+background: rgb(255, 255, 255);
+}
+
+QSlider::handle:vertical {
+margin-top: -10px;
+margin-bottom: -10px;
+background: rgb(0,115,170);
+}
+QSlider::handle:vertical:hover {
+background: rgb(0,115,170);
+}
+
+/* --------------------------------- SCROLLBAR HORIZONTAL --------------------------------------  */
+
+QScrollBar::groove:horizontal{
+background: white;
+height: 17px;
+}
+QScrollBar::sub-page:horizontal,QScrollBar::add-page:horizontal  {
+height: 10px;
+background: rgb(255, 255, 255);
+}
+QScrollBar::handle:horizontal {
+margin-right: -5px;
+background: rgb(0,115,170);
+}
+QScrollBar::handle:horizontal:hover {
+background: rgb(0,115,170);
+}
+
+/* --------------------------------------- SCROLLBAR VERTICAL ----------------------------------------------  */
+
+/* SCROLLBAR */
+QScrollBar:vertical {
+background: white;
+width: 15px;
+margin: 22px 0 22px 0;
+}
+/* HANDLE*/
+QScrollBar::handle:vertical {
+background: rgb(0,115,170);
+min-height: 20px;
+}
+
+/* UP ARROW */
+QScrollBar::up-arrow:vertical {
+image: url(assets/UI/Icons/interface_icons/arrow_up.png);
+width: 10px;
+height: 10px;
+}
+/* DOWN ARROW */
+QScrollBar::down-arrow:vertical {
+image: url(assets/UI/Icons/interface_icons/arrow_down.png);
+width: 10px;
+height: 10px;
+}
+/* UP BUTTON */
+QScrollBar::sub-line:vertical {
+background: rgb(0,115,170);
+height: 20px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+/* DOWN BUTTON */
+QScrollBar::add-line:vertical {
+background: rgb(0,115,170);
+height: 20px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+/* SUBPAGES - ADDPAGE */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+/* ---------------------------------- Q TOOL BAR -------------------------------------------------------- */
+/* TOOLBAR REGION */
+QToolBar {
+background: rgb(35,40,45);
+spacing: 20;
+
+}
+/* SEPARATOR */
+QToolBar:separator
+{
+background: rgb(80, 80, 80);
+height: 2;
+}
+/* QToolBar QToolButton { 
+    width: 100px;
+} */
+/* -----------------------------------------------Q TOOL BUTTON------------------------------------------- */
+/* BUTTON */
+QToolButton
+{
+color: rgb(255, 255, 255);
+background:rgb(35,40,45);
+}
+
+QToolButton:hover,QToolButton:pressed
+{
+background-color: rgb(64, 73, 82);
+}
+
+QMessageBox QLabel
+{
+color: red;
+}</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>10</y>
+     <width>311</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 italic 12pt &quot;Century Schoolbook&quot;;
+background-colorr: rgb(255, 255, 255);
+color:rgb(0,115,170);
+</string>
+   </property>
+   <property name="text">
+    <string>Choose The Suitable For Your Building :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>490</y>
+     <width>121</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 12pt &quot;Arial&quot;;
+border-radius:8px;</string>
+   </property>
+   <property name="text">
+    <string>Predicate</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+color: rgb(0, 0, 0);
+
+</string>
+   </property>
+   <property name="text">
+    <string>Use of project :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+color: rgb(0, 0, 0);
+</string>
+   </property>
+   <property name="text">
+    <string>Area of typical floor :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Number of floors  :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Type of foundation :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>210</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Type of slab :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Number of elevators :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+background-color:4f83cc;
+</string>
+   </property>
+   <property name="text">
+    <string>Type of external finishing :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>330</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Size of air condetioning :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Type of tilling :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Type of electricity :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>450</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Modern No. 20&quot;;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Type of sanitary :</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="com1">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>50</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Resediential</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Schools</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>School extension</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com2">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>90</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>60 – 100</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>100 – 200</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>200 – 300</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>300 – 400</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>400 – 500</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>500 – 600</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>600 – 700</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>700 – 800</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>800 – 900 </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>900 – 1000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1000 – 1100</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1100 – 1200 </string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com3">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>130</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com4">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>170</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>None</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Isolated</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Strap</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Piles</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Mat</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com5">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>210</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Solid</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ribbed</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Drop beams</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com6">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>250</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com7">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>290</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>None</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Normal plaster</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Marmarina</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Natural stone</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com8">
+   <property name="geometry">
+    <rect>
+     <x>223</x>
+     <y>330</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>None</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Central AC+False ceiling</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Split unit</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com9">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>370</y>
+     <width>184</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Ceramic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Terrazzo</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Porcelain</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com10">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>410</y>
+     <width>184</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Basic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Luxury</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="com11">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>450</y>
+     <width>184</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Basic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Luxury</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>0</y>
+     <width>361</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/dark_blue/img/1.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>button</zorder>
+  <zorder>label_13</zorder>
+  <zorder>label</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_12</zorder>
+  <zorder>com1</zorder>
+  <zorder>com2</zorder>
+  <zorder>com3</zorder>
+  <zorder>com4</zorder>
+  <zorder>com5</zorder>
+  <zorder>com6</zorder>
+  <zorder>com7</zorder>
+  <zorder>com8</zorder>
+  <zorder>com9</zorder>
+  <zorder>com10</zorder>
+  <zorder>com11</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_15</zorder>
+ </widget>
+ <resources>
+  <include location="../../Downloads/Compressed/pyqt-stylesheets-master/pyqtcss/src/dark_blue/style.qrc"/>
+  <include location="../dark_blue/style.qrc"/>
+ </resources>
+ <connections/>
+</ui>
